@@ -56,7 +56,6 @@
     const BAD_MOVIE_IDS = [
         80121840, // The Emoji Movie
         80994294, // Daphne & Velma
-        60034587, // White Chicks
     ];
 
     /**
@@ -105,6 +104,7 @@
         70138790, // How Do You Know
         80147986, // Wonder
         70271959, // Masterminds
+         1153328, // Anaconda
     ];
 
     /**
