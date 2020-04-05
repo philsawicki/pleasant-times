@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Pleasant Times",
+    "version": "0.0.1",
+    "author": "Philippe Sawicki",
+    "homepage_url": "https://philippesawicki.com",
+    "description": "Have a pleasant time on Netflix!",
+    "icons": {
+        "16": "images/rainbow-512.png",
+        "32": "images/rainbow-512.png",
+        "48": "images/rainbow-512.png",
+        "128": "images/rainbow-512.png"
+    },
+    "permissions": ["declarativeContent", "storage"],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.netflix.com/*"],
+            "css": ["pleasant-times.css"],
+            "js": ["pleasant-times.js"],
+            "run_at": "document_end"
+        }
+    ]
+}

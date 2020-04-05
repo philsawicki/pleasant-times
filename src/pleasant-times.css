@@ -1,0 +1,59 @@
+/**!
+ * Copyright (c) 2020 Philippe Sawicki
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+/**
+ * Override default filter, so it can be moved on the image.
+ */
+ .title-card.is-disliked .pleasant-times-blurred .boxart-container,
+ .title-card.is-disliked .pleasant-times-blurred .bob-background,
+ .title-card.is-disliked .pleasant-times-blurred .bob-title-art {
+     -webkit-filter: none !important;
+     filter: none !important;
+ }
+
+ .title-card.is-disliked .pleasant-times-blurred .boxart-image {
+     filter: blur(4px) grayscale(100%) !important;
+ }
+
+ .title-card:not(.is-disliked) .pleasant-times-blurred .boxart-image {
+    filter: blur(4px) !important;
+    transition: 0.5s filter linear;
+}
+
+@keyframes FADE-IN {
+    0%   { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.pleasant-times-blurred .fallback-text-container {
+    z-index: 10 !important;
+    background: linear-gradient(to top, rgba(0.0, 0.0, 0.0, 0.9) 0%, transparent 50%) !important;
+    animation: FADE-IN 2s;
+}
+
+.pleasant-times-disable-pointer-events {
+    pointer-events: none;
+}
+
+.pleasant-times-striketrough {
+    text-decoration: line-through;
+}
