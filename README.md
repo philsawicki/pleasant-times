@@ -22,7 +22,7 @@ Stay safe, and support each other.
 ## Installing
 
 The Chrome extension can be installed by:
- 1. Downloading the `.crx` file from the _Release_ page.
+ 1. Downloading the `.zip` file from the [_Releases_](https://github.com/philsawicki/pleasant-times/releases) page and unzipping it locally.
  2. Navigating to `chrome://extensions`.
  3. Enabling the `Developer mode`.
- 4. Drag-and-dropping the `.crx` extension to the page.
+ 4. Drag-and-dropping the unzipped extension to the `chrome://extensions` page.
